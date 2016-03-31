@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for Manati Blog profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function manatiblog_install() {
+}
