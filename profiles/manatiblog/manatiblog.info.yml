@@ -5,21 +5,10 @@ core: '8.x'
 dependencies:
   - node
   - block
-  - ckeditor
-  - config
-  - datetime
-  - editor
-  - image
-  - options
-  - path
   - page_cache
   - dynamic_page_cache
-  - taxonomy
   - dblog
   - search
-  - toolbar
-  - file
-  - views
 themes:
   - bartik
   - seven
