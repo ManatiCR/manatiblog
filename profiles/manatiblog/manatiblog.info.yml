@@ -15,7 +15,6 @@ dependencies:
   - options
   - image
   - taxonomy
-  - views
 themes:
   - bartik
   - seven
