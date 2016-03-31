@@ -12,6 +12,10 @@ dependencies:
   - search
   - toolbar
   - breakpoint
+  - options
+  - image
+  - taxonomy
+  - views
 themes:
   - bartik
   - seven
