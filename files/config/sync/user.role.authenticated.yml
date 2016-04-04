@@ -1,0 +1,23 @@
+uuid: 5ddcffff-231d-4d14-8f07-7a5162546632
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+permissions:
+  - 'use text format plain_text'
+  - 'access content'
+  - 'use text format basic_html'
+  - 'access comments'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'access site-wide contact form'
+  - 'access shortcuts'
+  - 'create blog_post content'
+  - 'delete own blog_post content'
+  - 'edit own blog_post content'
+  - 'revert blog_post revisions'
+  - 'view blog_post revisions'
+  - 'access content overview'
+  - 'view the administration theme'

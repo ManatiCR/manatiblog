@@ -1,0 +1,10 @@
+id: block_content.full
+uuid: 8d5d96fb-e696-45ec-ae50-8012d6df9d4f
+label: Full
+targetEntityType: block_content
+status: false
+cache: true
+langcode: en
+dependencies:
+  module:
+    - block_content

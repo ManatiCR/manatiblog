@@ -1,0 +1,90 @@
+uuid: 2116fbd5-958b-4808-bb00-a45d6acb230c
+langcode: en
+status: true
+dependencies:
+  entity:
+    - field.field.node.blog_post.body
+    - field.field.node.blog_post.field_category
+    - field.field.node.blog_post.field_image
+    - field.field.node.blog_post.field_tags
+    - node.type.blog_post
+  module:
+    - entity_reference
+    - image
+    - options
+    - path
+    - taxonomy
+    - text
+id: node.blog_post.default
+targetEntityType: node
+bundle: blog_post
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_category:
+    type: options_select
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_tags:
+    type: taxonomy_autocomplete
+    weight: 4
+    settings:
+      size: 60
+      autocomplete_route_name: taxonomy.autocomplete
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      autocomplete_type: tags
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 7
+    settings:
+      display_label: '1'
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 8
+    settings:
+      display_label: '1'
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
+third_party_settings: {  }

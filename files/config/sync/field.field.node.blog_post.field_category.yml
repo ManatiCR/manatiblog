@@ -1,0 +1,23 @@
+uuid: 27503926-e548-44dc-a103-3bed940a16b4
+langcode: en
+status: true
+dependencies:
+  entity:
+    - field.storage.node.field_category
+    - node.type.blog_post
+id: node.blog_post.field_category
+field_name: field_category
+entity_type: node
+bundle: blog_post
+label: Category
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 9c711f8d-98d0-4110-b226-3870251b7320
+default_value_callback: ''
+settings:
+  handler: default
+third_party_settings: {  }
+field_type: taxonomy_term_reference
