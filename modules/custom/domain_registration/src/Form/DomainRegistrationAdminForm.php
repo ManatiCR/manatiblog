@@ -20,7 +20,7 @@ class DomainRegistrationAdminForm extends ConfigFormBase {
     return 'domain_registration_admin_form';
   }
 
-    /**
+  /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
@@ -37,8 +37,11 @@ class DomainRegistrationAdminForm extends ConfigFormBase {
 
     parent::submitForm($form, $form_state);
   }
-  
 
+
+  /**
+   * {@inheritdoc}
+   */
   public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
     $options = array(
       0 => t('Allow only domains listed below to register'),
@@ -67,5 +70,16 @@ class DomainRegistrationAdminForm extends ConfigFormBase {
       '#description' => t('Enter the error message you want the user to see if the email address does not validate.'),
     );
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return array(
+      'domain_registration_method',
+      'domain_registration_message',
+      'domain_registration',
+    );
   }
 }
