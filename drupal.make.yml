@@ -26,5 +26,7 @@ projects:
     version: ~
   pathauto:
     version: ~
+  pathologic:
+    version: ~
   token:
     version: ~
