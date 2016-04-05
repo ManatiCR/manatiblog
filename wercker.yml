@@ -58,7 +58,7 @@ build:
             # Create Drupal DB
             mysql -u root -pAdmin2015 -e "create database drupal;"
             # Install Drupal and disable sendmail.
-            if [ -f /pipeline/source/files/config/sync/core.extension.yml ] ; then /usr/bin/env PHP_OPTIONS="-d sendmail_path=`which true`" && drush si standard --config-dir=sites/default/files/config/sync -y || drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();' || drush cim -y ; else /usr/bin/env PHP_OPTIONS="-d sendmail_path=`which true`" drush si standard -y ; fi
+            if [ -f /pipeline/source/files/config/sync/core.extension.yml ] ; then /usr/bin/env PHP_OPTIONS="-d sendmail_path=`which true`" && drush si manatiblog --config-dir=sites/default/files/config/sync -y || drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();' || drush cim -y ; else /usr/bin/env PHP_OPTIONS="-d sendmail_path=`which true`" drush si manatiblog -y ; fi
             # Post build configuration.
             drush cc drush
             drush cr
@@ -125,7 +125,7 @@ deploy:
             drush site-set @pantheon.manatiblog.dev
             echo 'Set sftp'
             terminus site set-connection-mode --site=manatiblog --env=dev --mode=sftp
-            if [ -f /pipeline/source/files/config/sync/core.extension.yml ] ; then drush si standard --config-dir=sites/default/config/sync -y || drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();' || drush cim -y ; else drush si standard -y ; fi
+            if [ -f /pipeline/source/files/config/sync/core.extension.yml ] ; then drush si manatiblog --config-dir=sites/default/config/sync -y || drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();' || drush cim -y ; else drush si manatiblog -y ; fi
             echo 'Set git'
             terminus site set-connection-mode --site=manatiblog --env=dev --mode=git
             # Post build configuration.
