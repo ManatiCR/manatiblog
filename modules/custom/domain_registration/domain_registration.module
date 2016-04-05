@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Domain Registration module file.
@@ -13,7 +14,7 @@ function domain_registration_form_user_register_form_alter(&$form, &$form_state,
 
 /**
  * Custom validation function.
- * 
+ *
  * Checks if the domain in the email address is on a list of allowed domains.
  */
 function domain_registration_user_register_validate(&$form, &$form_state) {

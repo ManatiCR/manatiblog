@@ -1,6 +1,8 @@
-<?php /**
+<?php
+
+/**
  * @file
- * Contains \Drupal\manati_custom_formatters\Plugin\Field\FieldFormatter\TagsArray.
+ * Holds \Drupal\manati_custom_formatters\Plugin\Field\FieldFormatter\TagsArray.
  */
 
 namespace Drupal\manati_custom_formatters\Plugin\Field\FieldFormatter;
@@ -10,6 +12,8 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
+ * Tags array field formatter.
+ *
  * @FieldFormatter(
  *  id = "tags_array",
  *  label = @Translation("Tags Array"),
@@ -50,5 +54,3 @@ class TagsArray extends FormatterBase {
   }
 
 }
-
-

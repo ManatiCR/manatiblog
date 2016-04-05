@@ -1,16 +1,19 @@
-<?php /**
+<?php
+
+/**
  * @file
- * Contains \Drupal\manati_custom_formatters\Plugin\Field\FieldFormatter\RawImagePath.
+ * Holds RawImagePath FieldFormatter.
  */
 
 namespace Drupal\manati_custom_formatters\Plugin\Field\FieldFormatter;
 
-use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatter;
 use Drupal\Core\Field\FieldItemListInterface;
 
 /**
+ * RawImagePath Field Formatter.
+ *
  * @FieldFormatter(
  *  id = "raw_image_path",
  *  label = @Translation("Raw Path Image"),

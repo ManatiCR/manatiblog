@@ -11,6 +11,9 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
 
+/**
+ * {@inheritdoc}
+ */
 class DomainRegistrationAdminForm extends ConfigFormBase {
 
   /**
@@ -82,4 +85,5 @@ class DomainRegistrationAdminForm extends ConfigFormBase {
       'domain_registration',
     );
   }
+
 }
