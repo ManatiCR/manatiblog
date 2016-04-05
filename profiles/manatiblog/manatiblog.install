@@ -4,6 +4,9 @@
  * Install, update and uninstall functions for Manati Blog profile.
  */
 
+use Drupal\user\Entity\User;
+use Drupal\user\RoleInterface;
+
 /**
  * Implements hook_install().
  */
