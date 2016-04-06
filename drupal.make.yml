@@ -18,6 +18,8 @@ projects:
   # Projects.
   config_update:
     version: ~
+  cors:
+    version: ~
   features:
     version: ~
   field_group:
