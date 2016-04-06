@@ -2,11 +2,8 @@ uuid: 2116fbd5-958b-4808-bb00-a45d6acb230c
 langcode: en
 status: true
 dependencies:
-  entity:
+  config:
     - field.field.node.blog_post.body
-    - field.field.node.blog_post.field_category
-    - field.field.node.blog_post.field_image
-    - field.field.node.blog_post.field_tags
     - node.type.blog_post
   module:
     - entity_reference
@@ -27,32 +24,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 1
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
   body:
     type: text_textarea_with_summary
     weight: 2
     settings:
       rows: 9
       summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-  field_category:
-    type: options_select
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-  field_tags:
-    type: taxonomy_autocomplete
-    weight: 4
-    settings:
-      size: 60
-      autocomplete_route_name: taxonomy.autocomplete
       placeholder: ''
     third_party_settings: {  }
   uid:

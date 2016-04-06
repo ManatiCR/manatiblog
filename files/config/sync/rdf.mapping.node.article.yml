@@ -1,11 +1,13 @@
-uuid: aefa8bcc-aabb-4ef9-9200-d41392fb66fd
+uuid: ea83d3ff-712d-4af1-ad37-5529e91eedc6
 langcode: en
 status: true
 dependencies:
-  entity:
+  config:
     - node.type.article
   module:
     - node
+_core:
+  default_config_hash: IdobJe379eDudt7-bXFfJjF7pDqFl-kYxVFtpWrgkro
 id: node.article
 targetEntityType: node
 bundle: article

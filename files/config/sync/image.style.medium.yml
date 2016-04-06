@@ -1,7 +1,9 @@
-uuid: 663fb0c1-3473-4c36-b663-994b27f502eb
+uuid: c9f33cee-7192-4619-8d00-b4197b0fc2d6
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: Y9NmnZHQq20ASSyTNA6JnwtWrJJiSajOehGDtmUFdM0
 name: medium
 label: 'Medium (220×220)'
 effects:
@@ -13,4 +15,3 @@ effects:
       width: 220
       height: 220
       upscale: false
-third_party_settings: {  }

@@ -1,23 +1,22 @@
-uuid: 065b7da6-020b-4d97-9a32-50c6fab9e5d7
+uuid: e29815c7-1974-49c6-bf09-9acefdcb06eb
 langcode: en
 status: true
 dependencies:
   module:
-    - system
+    - help
   theme:
     - bartik
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: bartik_help
 theme: bartik
-region: help
-weight: 0
+region: content
+weight: -30
 provider: null
-plugin: system_help_block
+plugin: help_block
 settings:
-  visibility: {  }
-  id: system_help_block
-  label: 'System Help'
-  provider: system
+  id: help_block
+  label: Help
+  provider: help
   label_display: '0'
-  cache:
-    max_age: -1
-    contexts: {  }
+visibility: {  }

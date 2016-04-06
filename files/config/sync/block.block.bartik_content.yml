@@ -1,4 +1,4 @@
-uuid: 28b265b7-b28f-4d15-8200-f5c36fc8e480
+uuid: a29bd850-cb13-487d-9c05-5e4abaf1f829
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,8 @@ dependencies:
     - system
   theme:
     - bartik
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
 id: bartik_content
 theme: bartik
 region: content
@@ -13,11 +15,8 @@ weight: 0
 provider: null
 plugin: system_main_block
 settings:
-  visibility: {  }
   id: system_main_block
   label: 'Main page content'
   provider: system
   label_display: '0'
-  cache:
-    max_age: 0
-    contexts: {  }
+visibility: {  }

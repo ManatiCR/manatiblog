@@ -1,7 +1,6 @@
 cache:
   page:
-    use_internal: true
-    max_age: 86400
+    max_age: 0
 css:
   preprocess: true
   gzip: true
@@ -13,6 +12,6 @@ fast_404:
 js:
   preprocess: true
   gzip: true
-response:
-  gzip: true
 stale_file_threshold: 2592000
+_core:
+  default_config_hash: b2cssrj-lOmATIbdehfCqfCFgVR0qCdxxWhwqa2KBVQ

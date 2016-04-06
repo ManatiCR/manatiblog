@@ -1,11 +1,14 @@
-uuid: 156b181f-8804-4f81-bd00-aa661c29ea27
-name: 'Estudio Manatí'
-mail: kporras07@gmail.com
+uuid: d2e44523-f5dc-44e8-8f00-cfd2a60d73c9
+name: Site-Install
+mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: node
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

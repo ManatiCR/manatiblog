@@ -1,13 +1,15 @@
-uuid: 1af13fbe-68dc-43fb-9309-095ccfafb3bb
+uuid: d1d59568-0389-409c-805a-90044109decc
 langcode: en
 status: true
 dependencies:
-  entity:
+  config:
     - system.menu.account
   module:
     - system
   theme:
     - bartik
+_core:
+  default_config_hash: DweBpscQZdG0-fHkSpUzdYucrNH45G_KF7Z82V-oyQM
 id: bartik_account_menu
 theme: bartik
 region: secondary_menu
@@ -15,13 +17,10 @@ weight: 0
 provider: null
 plugin: 'system_menu_block:account'
 settings:
-  visibility: {  }
   id: 'system_menu_block:account'
   label: 'User account menu'
   provider: system
   label_display: '0'
-  cache:
-    max_age: -1
-    contexts: {  }
   level: 1
   depth: 1
+visibility: {  }

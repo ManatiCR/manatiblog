@@ -1,9 +1,12 @@
-uuid: e12c366b-9a12-405b-8b5f-959d37d36717
+uuid: c4d1c1d0-1e32-49a0-8809-9ef15b028a51
 langcode: en
 status: true
 dependencies:
   module:
     - file
+    - user
+_core:
+  default_config_hash: cd5WTpAoJg1rBLH-5w1C-GF477pRWanut86CCBMeUz0
 id: files
 label: Files
 module: file
@@ -23,20 +26,17 @@ display:
         type: perm
         options:
           perm: 'access files overview'
-        provider: views
       cache:
-        type: none
+        type: tag
         options: {  }
-        provider: views
       query:
         type: views_query
         options:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_comment: false
+          query_comment: ''
           query_tags: {  }
-        provider: views
       exposed_form:
         type: basic
         options:
@@ -47,7 +47,6 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-        provider: views
       pager:
         type: mini
         options:
@@ -56,8 +55,8 @@ display:
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
+            previous: '‹ Previous'
+            next: 'Next ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -66,7 +65,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-        provider: views
       style:
         type: table
         options:
@@ -146,10 +144,8 @@ display:
               responsive: priority-medium
           default: changed
           empty_table: true
-        provider: views
       row:
         type: fields
-        provider: views
       fields:
         fid:
           id: fid
@@ -166,7 +162,6 @@ display:
             html: false
           hide_empty: false
           empty_zero: false
-          link_to_file: false
           relationship: none
           group_type: group
           admin_label: ''
@@ -182,28 +177,45 @@ display:
           element_default_classes: true
           empty: ''
           hide_alter_empty: true
-          plugin_id: file
+          plugin_id: field
+          entity_type: file
+          entity_field: fid
         filename:
           id: filename
           table: file_managed
           field: filename
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          link_to_file: true
           relationship: none
           group_type: group
           admin_label: ''
           label: Name
           exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -213,8 +225,24 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
-          plugin_id: file
+          click_sort_column: value
+          type: file_link
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+          entity_type: file
+          entity_field: filename
         filemime:
           id: filemime
           table: file_managed
@@ -241,7 +269,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -263,9 +291,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          link_to_file: false
-          filemime_image: false
-          plugin_id: file_filemime
+          type: file_filemime
+          plugin_id: field
+          entity_type: file
+          entity_field: filemime
         filesize:
           id: filesize
           table: file_managed
@@ -292,7 +321,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -314,8 +343,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          file_size_display: formatted
-          plugin_id: file_size
+          type: file_size
+          plugin_id: field
+          entity_type: file
+          entity_field: filesize
         status:
           id: status
           table: file_managed
@@ -342,7 +373,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -364,7 +395,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          plugin_id: file_status
+          type: boolean
+          settings:
+            format: custom
+            format_custom_false: Temporary
+            format_custom_true: Permanent
+          plugin_id: field
+          entity_type: file
+          entity_field: status
         created:
           id: created
           table: file_managed
@@ -391,7 +429,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -413,10 +451,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          date_format: medium
-          custom_date_format: ''
-          timezone: ''
-          plugin_id: date
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
+          entity_type: file
+          entity_field: created
         changed:
           id: changed
           table: file_managed
@@ -443,7 +485,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -465,10 +507,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          date_format: medium
-          custom_date_format: ''
-          timezone: ''
-          plugin_id: date
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
+          entity_type: file
+          entity_field: changed
         count:
           id: count
           table: file_usage
@@ -482,7 +528,7 @@ display:
             alter_text: false
             text: ''
             make_link: true
-            path: 'admin/content/files/usage/[fid]'
+            path: 'admin/content/files/usage/{{ fid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -495,7 +541,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -522,8 +568,7 @@ display:
           decimal: .
           separator: ','
           format_plural: true
-          format_plural_singular: '1 place'
-          format_plural_plural: '@count places'
+          format_plural_string: "1 place\x03@count places"
           prefix: ''
           suffix: ''
           plugin_id: numeric
@@ -566,6 +611,8 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: string
+          entity_type: file
+          entity_field: filename
         filemime:
           id: filemime
           table: file_managed
@@ -604,6 +651,8 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: string
+          entity_type: file
+          entity_field: filemime
         status:
           id: status
           table: file_managed
@@ -643,6 +692,8 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: file_status
+          entity_type: file
+          entity_field: status
       sorts: {  }
       title: Files
       header: {  }
@@ -667,6 +718,16 @@ display:
       arguments: {  }
       group_by: true
       show_admin_links: true
+      display_extenders: {  }
+    cache_metadata:
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      max-age: 0
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -684,7 +745,6 @@ display:
       display_description: ''
       defaults:
         pager: true
-        pager_options: true
         relationships: false
       relationships:
         fid:
@@ -695,6 +755,16 @@ display:
           group_type: group
           admin_label: 'File usage'
           required: false
+      display_extenders: {  }
+    cache_metadata:
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      max-age: 0
+      tags: {  }
   page_2:
     display_plugin: page
     id: page_2
@@ -707,7 +777,6 @@ display:
       defaults:
         empty: false
         pager: false
-        pager_options: false
         filters: false
         filter_groups: false
         fields: false
@@ -725,8 +794,8 @@ display:
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
+            previous: '‹ Previous'
+            next: 'Next ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -735,8 +804,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-        provider: views
-      pager_options: false
       filters: {  }
       filter_groups:
         operator: AND
@@ -768,7 +835,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -792,7 +859,6 @@ display:
           hide_alter_empty: true
           link_to_entity: true
           plugin_id: entity_label
-          provider: views
         type:
           id: type
           table: file_usage
@@ -819,7 +885,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -842,7 +908,6 @@ display:
           empty_zero: false
           hide_alter_empty: true
           plugin_id: standard
-          provider: views
         module:
           id: module
           table: file_usage
@@ -869,7 +934,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -892,7 +957,6 @@ display:
           empty_zero: false
           hide_alter_empty: true
           plugin_id: standard
-          provider: views
         count:
           id: count
           table: file_usage
@@ -919,7 +983,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -946,12 +1010,10 @@ display:
           decimal: .
           separator: ','
           format_plural: false
-          format_plural_singular: '1'
-          format_plural_plural: '@count'
+          format_plural_string: "1\x03@count"
           prefix: ''
           suffix: ''
           plugin_id: numeric
-          provider: views
       group_by: false
       title: 'File usage'
       arguments:
@@ -968,7 +1030,7 @@ display:
             title_enable: false
             title: All
           title_enable: true
-          title: 'File usage information for %1'
+          title: 'File usage information for {{ arguments.fid }}'
           default_argument_type: fixed
           default_argument_options:
             argument: ''
@@ -990,7 +1052,8 @@ display:
           break_phrase: false
           not: false
           plugin_id: file_fid
-          provider: file
+          entity_type: file
+          entity_field: fid
       style:
         type: table
         options:
@@ -1038,11 +1101,9 @@ display:
               responsive: ''
           default: entity_label
           empty_table: true
-        provider: views
       row:
         type: fields
         options: {  }
-        provider: views
       relationships:
         fid:
           id: fid
@@ -1052,3 +1113,12 @@ display:
           group_type: group
           admin_label: 'File usage'
           required: true
+      display_extenders: {  }
+    cache_metadata:
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      max-age: 0
+      tags: {  }

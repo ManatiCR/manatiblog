@@ -2,9 +2,11 @@ uuid: 8d753e14-e1c9-47a3-9500-0ccae4d3ee6f
 langcode: en
 status: true
 dependencies:
-  entity:
+  config:
     - field.storage.node.body
     - node.type.blog_post
+  module:
+    - text
 id: node.blog_post.body
 field_name: body
 entity_type: node

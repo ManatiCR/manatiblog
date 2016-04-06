@@ -1,10 +1,12 @@
-id: user.full
-uuid: 1060fce4-aad0-408f-8d0a-10c35516ab46
-label: 'User account'
-targetEntityType: user
-status: false
-cache: true
+uuid: 5b40d841-9982-49b8-8940-642287fb702a
 langcode: en
+status: false
 dependencies:
   module:
     - user
+_core:
+  default_config_hash: mQIF_foYjmnVSr9MpcD4CTaJE_FpO1AyDd_DskztGhM
+id: user.full
+label: 'User account'
+targetEntityType: user
+cache: true

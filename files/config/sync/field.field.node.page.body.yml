@@ -1,10 +1,14 @@
-uuid: 45da867f-4bf7-4891-b500-a9f5121a15ea
+uuid: 2a75e4d0-8c40-4156-b22b-43c43349fb0c
 langcode: en
 status: true
 dependencies:
-  entity:
+  config:
     - field.storage.node.body
     - node.type.page
+  module:
+    - text
+_core:
+  default_config_hash: rUop-8b6hvxxDYbv-KobTfNIBNbPY9qOPl8f6kBNSpw
 id: node.page.body
 field_name: body
 entity_type: node
@@ -17,5 +21,4 @@ default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
-third_party_settings: {  }
 field_type: text_with_summary

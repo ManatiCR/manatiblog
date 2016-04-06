@@ -1,8 +1,8 @@
-uuid: 1df720da-4a81-466b-a15f-956b1a718f70
+uuid: c8cbae73-b408-4e42-bf00-d69a85025a6e
 langcode: en
 status: true
 dependencies:
-  entity:
+  config:
     - user.role.administrator
   module:
     - user

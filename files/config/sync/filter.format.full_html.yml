@@ -1,10 +1,11 @@
-uuid: 7e2b5906-09f0-4cdc-9e05-5d6ef5331b7c
+uuid: d93edff3-414e-4f8f-8948-726ffb8c3f97
 langcode: en
 status: true
 dependencies:
   module:
     - editor
-    - pathologic
+_core:
+  default_config_hash: hewPmBgni9jlDK_IjLxUx1HsTbinK-hdl0lOwjbteIY
 name: 'Full HTML'
 format: full_html
 weight: 1
@@ -33,30 +34,3 @@ filters:
     status: true
     weight: 11
     settings: {  }
-  filter_html:
-    id: filter_html
-    provider: filter
-    status: false
-    weight: -10
-    settings:
-      allowed_html: '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h4> <h5> <h6> <s> <sup> <sub> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <h2> <h3> <pre>'
-      filter_html_help: true
-      filter_html_nofollow: false
-  filter_url:
-    id: filter_url
-    provider: filter
-    status: false
-    weight: 0
-    settings:
-      filter_url_length: 72
-  filter_pathologic:
-    id: filter_pathologic
-    provider: pathologic
-    status: true
-    weight: 50
-    settings:
-      reminder: ''
-      settings_source: global
-      local_settings: ''
-      protocol_style: full
-      local_paths: ''

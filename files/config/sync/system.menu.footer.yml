@@ -1,8 +1,10 @@
-uuid: 667923da-b030-4c00-a200-b025d71fb3c0
+uuid: 72ceebb1-86b5-4792-a600-bbdb8c37818d
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer
 label: Footer
-description: 'Use this for linking to site information.'
+description: 'Site information links'
 locked: true

@@ -1,23 +1,22 @@
-uuid: 136e1b5a-f99e-4982-b715-211b9a29a888
+uuid: 6658570f-1259-4913-8b00-baac6a3b7bbe
 langcode: en
 status: true
 dependencies:
   module:
-    - system
+    - help
   theme:
     - seven
+_core:
+  default_config_hash: NU5A_49mwLHfs5xFzMFrZ850w9pgUolxMS9NNF3vv4c
 id: seven_help
 theme: seven
 region: help
 weight: 0
 provider: null
-plugin: system_help_block
+plugin: help_block
 settings:
-  visibility: {  }
-  id: system_help_block
-  label: 'System Help'
-  provider: system
+  id: help_block
+  label: Help
+  provider: help
   label_display: '0'
-  cache:
-    max_age: -1
-    contexts: {  }
+visibility: {  }

@@ -1,13 +1,15 @@
-uuid: ba39249e-fe04-4b62-9900-e6838039536e
+uuid: 3bb5f660-2ed7-4e5d-ac0b-11be2fd029aa
 langcode: en
 status: true
 dependencies:
-  entity:
+  config:
     - system.menu.tools
   module:
     - system
   theme:
     - bartik
+_core:
+  default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
 id: bartik_tools
 theme: bartik
 region: sidebar_first
@@ -15,13 +17,10 @@ weight: 0
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
-  visibility: {  }
   id: 'system_menu_block:tools'
   label: Tools
   provider: system
   label_display: visible
-  cache:
-    max_age: -1
-    contexts: {  }
   level: 1
   depth: 0
+visibility: {  }

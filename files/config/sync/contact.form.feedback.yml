@@ -1,10 +1,12 @@
-uuid: e2def6e8-ef21-40cb-bd31-494364db9968
+uuid: f91112f3-0acd-4be9-aa00-a4d2f9beabac
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: c4zaT5cyPxuTXI6JOWt3qRtMvICT9tHB6d9a5VG-CmQ
 id: feedback
 label: 'Website feedback'
 recipients:
-  - ''
+  - admin@example.com
 reply: ''
 weight: 0
