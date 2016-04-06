@@ -11,18 +11,20 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
-  dynamic_page_cache: 0
   domain_registration: 0
+  dynamic_page_cache: 0
   editor: 0
   entity_reference: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  hal: 0
   help: 0
   history: 0
   image: 0
   link: 0
+  manati_custom_formatters: 0
   menu_ui: 0
   node: 0
   options: 0
