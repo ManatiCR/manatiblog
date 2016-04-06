@@ -23,4 +23,7 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_category: true
+  field_image: true
+  field_tags: true
   links: true
