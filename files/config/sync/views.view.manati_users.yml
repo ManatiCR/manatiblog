@@ -37,7 +37,7 @@ display:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_comment: false
+          query_comment: ''
           query_tags: {  }
       exposed_form:
         type: basic
@@ -106,7 +106,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: null
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -156,7 +156,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: null
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -185,8 +185,8 @@ display:
           group_column: ''
           group_columns: {  }
           group_rows: true
-          delta_limit: all
-          delta_offset: '0'
+          delta_limit: 0
+          delta_offset: 0
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
@@ -253,7 +253,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: null
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -303,7 +303,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: ''
+            max_length: null
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -418,9 +418,9 @@ display:
             fail: 'not found'
           validate_options:
             operation: view
-            multiple: '0'
-            access: 0
-            restrict_roles: 0
+            multiple: 0
+            access: false
+            restrict_roles: false
             roles: {  }
           break_phrase: false
           not: false
