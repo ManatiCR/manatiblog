@@ -18,6 +18,8 @@ projects:
   # Projects.
   config_update:
     version: ~
+  cors:
+    version: ~
   features:
     version: ~
   field_group:
@@ -25,6 +27,8 @@ projects:
   panels:
     version: ~
   pathauto:
+    version: ~
+  pathologic:
     version: ~
   token:
     version: ~
