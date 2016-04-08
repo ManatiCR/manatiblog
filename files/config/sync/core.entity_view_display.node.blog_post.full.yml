@@ -36,4 +36,5 @@ content:
 hidden:
   field_category: true
   field_tags: true
+  langcode: true
   links: true
