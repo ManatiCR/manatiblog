@@ -42,3 +42,4 @@ $config_directories['sync'] = 'sites/default/files/config/sync';
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $config_directories['sync'] = 'sites/default/config/sync';
 }
+header("Access-Control-Allow-Origin: *");
